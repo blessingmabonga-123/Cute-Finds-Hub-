@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cute Finds Hub 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  * { box-sizing: border-box; font-family: Arial, sans-serif; }
+  body { margin: 0; background: #fff0f6; }
+  header { background: #ff69b4; color: white; text-align: center; padding: 25px; }
+  header h1 { margin: 0; font-size: 32px; }
+  header p { margin: 5px 0 0; font-size: 16px; }
+  h2.category { color: #ff1493; margin-left: 30px; margin-top: 30px; }
+  .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding: 20px 30px; }
+  .card { background: white; border-radius: 15px; padding: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.2s; }
+  .card:hover { transform: translateY(-5px); }
+  .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; cursor: pointer; }
+  .card h3 { color: #ff1493; margin: 10px 0 5px; font-size: 18px; }
+  .card p { color: #555; font-size: 14px; margin: 0 0 8px; }
+  .card span { display: block; color: #ff1493; font-weight: bold; font-size: 16px; margin-bottom: 5px; }
+  footer { background: #ffc0cb; text-align: center; padding: 15px; color: white; font-size: 14px; }
+  a { text-decoration: none; color: inherit; }
+
+  /* Order Form */
+  .order-form { max-width: 600px; margin: 40px auto; background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+  .order-form h2 { text-align: center; color: #ff1493; margin-bottom: 20px; }
+  .order-form label { display: block; margin-bottom: 5px; font-weight: bold; }
+  .order-form input, .order-form select { width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc; }
+  .order-form button { width: 100%; padding: 12px; background: #ff69b4; color: white; border: none; border-radius: 10px; cursor: pointer; font-size: 16px; }
+  .order-form button:hover { background: #ff1493; }
+  .payment-info { text-align: center; margin-top: 15px; font-size: 16px; color: #555; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Cute Finds Hub 💖</h1>
+  <p>Pretty finds • Affordable • Fast delivery 💗</p>
+</header>
+
+<!-- BAG SETS -->
+<h2 class="category">Bag Sets</h2>
+<section class="products">
+  <div class="card"><a href="./images/01-bag-set.jpg" target="_blank"><img src="./images/01-bag-set.jpg" alt="Bag Set 1"></a><h3>Bag Set 1</h3><p>Complete stylish collection</p><span>Ksh 3,500</span></div>
+  <div class="card"><a href="./images/02-bag-set-2.jpg" target="_blank"><img src="./images/02-bag-set-2.jpg" alt="Bag Set 2"></a><h3>Bag Set 2</h3><p>Trendy versatile collection</p><span>Ksh 3,800</span></div>
+</section>
+
+<!-- SPECIAL BAGS -->
+<h2 class="category">Special Bags</h2>
+<section class="products">
+  <div class="card"><a href="./images/22-h-cute-tote-bag.jpg" target="_blank"><img src="./images/22-h-cute-tote-bag.jpg" alt="H Cute Tote"></a><h3>H Cute Tote</h3><p>Adorable everyday tote</p><span>Ksh 2,000</span></div>
+  <div class="card"><a href="./images/23-simple-tote.jpg" target="_blank"><img src="./images/23-simple-tote.jpg" alt="Simple Tote"></a><h3>Simple Tote</h3><p>Minimalist and chic</p><span>Ksh 1,900</span></div>
+  <div class="card"><a href="./images/21-g-tote-bag.jpg" target="_blank"><img src="./images/21-g-tote-bag.jpg" alt="G Tote C"></a><h3>G Tote C</h3><p>Trendy and functional</p><span>Ksh 2,100</span></div>
+  <div class="card"><a href="./images/36-cute-tote-j.jpg" target="_blank"><img src="./images/36-cute-tote-j.jpg" alt="Cute Tote J"></a><h3>Cute Tote J</h3><p>Perfect for daily use</p><span>Ksh 2,000</span></div>
+  <div class="card"><a href="./images/37-bow-g-tote-j.jpg" target="_blank"><img src="./images/37-bow-g-tote-j.jpg" alt="Bow G Tote J"></a><h3>Bow G Tote J</h3><p>Elegant bow design tote</p><span>Ksh 2,200</span></div>
+  <div class="card"><a href="./images/bodysplash.jpg" target="_blank"><img src="./images/bodysplash.jpg" alt="Bodysplash"></a><h3>Bodysplash</h3><p>Refreshing and fragrant</p><span>Ksh 1,500</span></div>
+</section>
+
+<!-- CLASSY BAGS -->
+<h2 class="category">Classy Bags</h2>
+<section class="products">
+  <!-- Include all other classy bags -->
+  <div class="card"><a href="./images/03-classy-v-bag.jpg" target="_blank"><img src="./images/03-classy-v-bag.jpg" alt="Classy V Bag"></a><h3>Classy V Bag</h3><p>Elegant V-design tote</p><span>Ksh 2,200</span></div>
+  <div class="card"><a href="./images/04-classy-arm-bag.jpg" target="_blank"><img src="./images/04-classy-arm-bag.jpg" alt="Classy Arm Bag"></a><h3>Classy Arm Bag</h3><p>Elegant shoulder bag</p><span>Ksh 1,800</span></div>
+  <div class="card"><a href="./images/05-classy-bag-bow.jpg" target="_blank"><img src="./images/05-classy-bag-bow.jpg" alt="Classy Bag Bow"></a><h3>Classy Bag Bow</h3><p>Chic and stylish</p><span>Ksh 1,900</span></div>
+  <!-- Add all remaining 38 products similarly -->
+</section>
+
+<!-- ORDER FORM -->
+<div class="order-form">
+  <h2>Place Your Order 💖</h2>
+  <form action="mailto:your@email.com" method="post" enctype="text/plain">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+    <label for="location">Delivery Location</label>
+    <input type="text" id="location" name="location" required placeholder="Enter delivery address">
+
+    <label for="product">Product</label>
+    <select id="product" name="product" required>
+      <option value="" disabled selected>Select product</option>
+      <option value="Bag Set 1">Bag Set 1</option>
+      <option value="Bag Set 2">Bag Set 2</option>
+      <option value="H Cute Tote">H Cute Tote</option>
+      <option value="Simple Tote">Simple Tote</option>
+      <option value="G Tote C">G Tote C</option>
+      <option value="Cute Tote J">Cute Tote J</option>
+      <option value="Bow G Tote J">Bow G Tote J</option>
+      <option value="Bodysplash">Bodysplash</option>
+      <!-- Add all remaining products -->
+    </select>
+
+    <label for="color">Color</label>
+    <input type="text" id="color" name="color" placeholder="Enter color preference">
+
+    <label for="quantity">Quantity</label>
+    <input type="number" id="quantity" name="quantity" min="1" value="1">
+
+    <div class="payment-info">
+      <p>Payment Method: Send Money</p>
+      <p>Contact/Payment Number: 0114688844</p>
+    </div>
+
+    <button type="submit">Submit Order</button>
+  </form>
+</div>
+
+<footer>
+  <p>© 2026 Cute Finds Hub 💖</p>
+</footer>
+
+</body>
+</html>

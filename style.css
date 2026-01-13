@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cute Finds Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Cute Finds Hub</h1>
+  <p>Pretty finds • Affordable • Fast delivery 💗</p>
+</header>
+
+<section class="products">
+
+  <div class="card">
+    <img src="./images/coach-bag.jpg" alt="Coach Bag">
+    <h3>Coach Bags</h3>
+    <p>Trendy & classy inspired bags</p>
+    <span>Ksh 2,000</span>
+  </div>
+
+  <div class="card">
+    <img src="./images/coach-tabby.jpg" alt="Coach Tabby">
+    <h3>Coach Tabby Bag</h3>
+    <p>Elegant shoulder bag</p>
+    <span>Ksh 2,000</span>
+  </div>
+
+  <div class="card">
+    <img src="./images/coach-tote.jpg" alt="Coach Tote">
+    <h3>Coach Tote Bag</h3>
+    <p>Spacious everyday tote</p>
+    <span>Ksh 2,000</span>
+  </div>
+
+  <div class="card">
+    <img src="./images/face-masks.jpg" alt="Face Masks">
+    <h3>Face Masks</h3>
+    <p>Pamanga knit face masks</p>
+    <span>Ksh 50</span>
+  </div>
+
+  <div class="card">
+    <img src="./images/pen-perfume-1.jpg" alt="Pen Perfume">
+    <h3>Pen Perfumes</h3>
+    <p>Portable long-lasting scents</p>
+    <span>Ksh 150</span>
+  </div>
+
+  <div class="card">
+    <img src="./images/pen-perfume-2.jpg" alt="Pen Perfume">
+    <h3>Pen Perfumes</h3>
+    <p>Sweet & classy fragrances</p>
+    <span>Ksh 150</span>
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 Cute Finds Hub</p>
+</footer>
+
+</body>
+</html>
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #fff0f6;
+}
+
+header {
+  background: #ff69b4;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card span {
+  display: block;
+  margin-top: 8px;
+  color: #ff1493;
+  font-weight: bold;
+}
+
+footer {
+  background: #ffc0cb;
+  text-align: center;
+  padding: 15px;
+  color: white;
+}
+
