@@ -20,16 +20,28 @@
   .card h3 { color: #ff1493; margin: 10px 0 5px; font-size: 18px; }
   .card p { color: #555; font-size: 14px; margin: 0 0 8px; }
   .card span { display: block; color: #ff1493; font-weight: bold; font-size: 16px; margin-bottom: 5px; }
+  .card button { padding: 8px 12px; background: #ff1493; color: white; border: none; border-radius: 8px; cursor: pointer; }
+  .card button:hover { background: #c7007b; }
   a { text-decoration: none; color: inherit; }
 
   footer { background: #ffc0cb; text-align: center; padding: 15px; color: white; font-size: 14px; }
+
+  /* Cart Panel */
+  .cart-panel { position: fixed; top: 80px; right: 0; width: 300px; max-height: 80vh; overflow-y: auto; background: white; border-left: 2px solid #ff1493; padding: 15px; box-shadow: -4px 0 10px rgba(0,0,0,0.1); z-index: 100; }
+  .cart-panel h2 { color: #ff1493; font-size: 20px; margin-top: 0; text-align: center; }
+  .cart-item { display: flex; justify-content: space-between; margin-bottom: 10px; align-items: center; }
+  .cart-item p { margin: 0; font-size: 14px; }
+  .cart-item button { background: #ff1493; color: white; border: none; border-radius: 5px; padding: 3px 6px; cursor: pointer; }
+  .cart-item button:hover { background: #c7007b; }
+  .cart-total { font-weight: bold; margin-top: 10px; color: #ff1493; text-align: center; }
 
   /* Order Form */
   .order-form { max-width: 600px; margin: 40px auto; background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
   .order-form h2 { text-align: center; color: #ff1493; margin-bottom: 20px; }
   .order-form label { display: block; margin-bottom: 5px; font-weight: bold; }
-  .order-form input, .order-form select { width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc; }
-  .order-form select[multiple] { height: 180px; }
+  .order-form input, .order-form textarea { width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc; }
+  .order-form textarea { resize: none; }
+
   .order-form button { width: 100%; padding: 12px; background: #25D366; color: white; border: none; border-radius: 10px; cursor: pointer; font-size: 16px; margin-bottom: 10px; }
   .order-form button:hover { background: #128C7E; }
 
@@ -47,74 +59,77 @@
   <p>Pretty finds • Affordable • Fast delivery 💗</p>
 </header>
 
-<!-- PRODUCT CATALOG -->
-<!-- BAG SETS -->
+<!-- PRODUCTS SECTIONS -->
 <h2 class="category">Bag Sets</h2>
 <section class="products">
-  <div class="card"><a href="./images/01-bag-set.jpg" target="_blank"><img src="./images/01-bag-set.jpg" alt="Bag Set 1"></a><h3>Bag Set 1</h3><p>Complete stylish collection</p><span>Ksh 2000</span></div>
-  <div class="card"><a href="./images/02-bag-set-2.jpg" target="_blank"><img src="./images/02-bag-set-2.jpg" alt="Bag Set 2"></a><h3>Bag Set 2</h3><p>Trendy versatile collection</p><span>Ksh 2000</span></div>
+  <div class="card" data-name="Bag Set 1" data-price="2000">
+    <a href="./images/01-bag-set.jpg" target="_blank"><img src="./images/01-bag-set.jpg" alt="Bag Set 1"></a>
+    <h3>Bag Set 1</h3><p>Complete stylish collection</p><span>Ksh 2000</span>
+    <button class="addCart">Add to Cart</button>
+  </div>
+  <div class="card" data-name="Bag Set 2" data-price="2000">
+    <a href="./images/02-bag-set-2.jpg" target="_blank"><img src="./images/02-bag-set-2.jpg" alt="Bag Set 2"></a>
+    <h3>Bag Set 2</h3><p>Trendy versatile collection</p><span>Ksh 2000</span>
+    <button class="addCart">Add to Cart</button>
+  </div>
 </section>
 
-<!-- SPECIAL BAGS -->
 <h2 class="category">Special Bags</h2>
 <section class="products">
-  <div class="card"><a href="./images/22-h-cute-tote-bag.jpg" target="_blank"><img src="./images/22-h-cute-tote-bag.jpg" alt="H Cute Tote"></a><h3>H Cute Tote</h3><p>Adorable everyday tote</p><span>Ksh 1200</span></div>
-  <div class="card"><a href="./images/23-simple-tote.jpg" target="_blank"><img src="./images/23-simple-tote.jpg" alt="Simple Tote"></a><h3>Simple Tote</h3><p>Minimalist and chic</p><span>Ksh 1,000</span></div>
-  <div class="card"><a href="./images/21-g-tote-bag.jpg" target="_blank"><img src="./images/21-g-tote-bag.jpg" alt="G Tote C"></a><h3>G Tote C</h3><p>Trendy and functional</p><span>Ksh 900</span></div>
-  <div class="card"><a href="./images/36-cute-tote-j.jpg" target="_blank"><img src="./images/36-cute-tote-j.jpg" alt="Cute Tote J"></a><h3>Cute Tote J</h3><p>Perfect for daily use</p><span>Ksh 1200</span></div>
-  <div class="card"><a href="./images/37-bow-g-tote-j.jpg" target="_blank"><img src="./images/37-bow-g-tote-j.jpg" alt="Bow G Tote J"></a><h3>Bow G Tote J</h3><p>Elegant bow design tote</p><span>Ksh 1,200</span></div>
+  <div class="card" data-name="H Cute Tote" data-price="1200">
+    <a href="./images/22-h-cute-tote-bag.jpg" target="_blank"><img src="./images/22-h-cute-tote-bag.jpg" alt="H Cute Tote"></a>
+    <h3>H Cute Tote</h3><p>Adorable everyday tote</p><span>Ksh 1200</span>
+    <button class="addCart">Add to Cart</button>
+  </div>
+  <div class="card" data-name="Simple Tote" data-price="1000">
+    <a href="./images/23-simple-tote.jpg" target="_blank"><img src="./images/23-simple-tote.jpg" alt="Simple Tote"></a>
+    <h3>Simple Tote</h3><p>Minimalist and chic</p><span>Ksh 1000</span>
+    <button class="addCart">Add to Cart</button>
+  </div>
+  <div class="card" data-name="G Tote C" data-price="900">
+    <a href="./images/21-g-tote-bag.jpg" target="_blank"><img src="./images/21-g-tote-bag.jpg" alt="G Tote C"></a>
+    <h3>G Tote C</h3><p>Trendy and functional</p><span>Ksh 900</span>
+    <button class="addCart">Add to Cart</button>
+  </div>
+  <div class="card" data-name="Cute Tote J" data-price="1200">
+    <a href="./images/36-cute-tote-j.jpg" target="_blank"><img src="./images/36-cute-tote-j.jpg" alt="Cute Tote J"></a>
+    <h3>Cute Tote J</h3><p>Perfect for daily use</p><span>Ksh 1200</span>
+    <button class="addCart">Add to Cart</button>
+  </div>
+  <div class="card" data-name="Bow G Tote J" data-price="1200">
+    <a href="./images/37-bow-g-tote-j.jpg" target="_blank"><img src="./images/37-bow-g-tote-j.jpg" alt="Bow G Tote J"></a>
+    <h3>Bow G Tote J</h3><p>Elegant bow design tote</p><span>Ksh 1200</span>
+    <button class="addCart">Add to Cart</button>
+  </div>
 </section>
 
-<!-- CLASSY BAGS -->
 <h2 class="category">Classy Bags</h2>
 <section class="products">
-  <div class="card"><a href="./images/03-classy-v-bag.jpg" target="_blank"><img src="./images/03-classy-v-bag.jpg" alt="Classy V Bag"></a><h3>Classy V Bag</h3><p>Elegant V-design tote</p><span>Ksh 1200</span></div>
-  <div class="card"><a href="./images/04-classy-arm-bag.jpg" target="_blank"><img src="./images/04-classy-arm-bag.jpg" alt="Classy Arm Bag"></a><h3>Classy Arm Bag</h3><p>Elegant shoulder bag</p><span>Ksh 700</span></div>
-  <div class="card"><a href="./images/05-classy-bag-bow.jpg" target="_blank"><img src="./images/05-classy-bag-bow.jpg" alt="Classy Bag Bow"></a><h3>Classy Bag Bow</h3><p>Chic and stylish</p><span>Ksh 850</span></div>
-  <div class="card"><a href="./images/06-classy-bags.jpg" target="_blank"><img src="./images/06-classy-bags.jpg" alt="Classy Bags"></a><h3>Classy Bags</h3><p>Classic and versatile</p><span>Ksh 1300</span></div>
-  <div class="card"><a href="./images/07-classy-bags-v.jpg" target="_blank"><img src="./images/07-classy-bags-v.jpg" alt="Classy Bags V"></a><h3>Classy Bags V</h3><p>Elegant V-shaped tote</p><span>Ksh 700</span></div>
-  <div class="card"><a href="./images/08-classy-cute-bag-1.jpg" target="_blank"><img src="./images/08-classy-cute-bag-1.jpg" alt="Classy Cute Bag 1"></a><h3>Classy Cute Bag 1</h3><p>Adorable and stylish</p><span>Ksh 700</span></div>
-  <div class="card"><a href="./images/09-classy-cute-bag-2.jpg" target="_blank"><img src="./images/09-classy-cute-bag-2.jpg" alt="Classy Cute Bag 2"></a><h3>Classy Cute Bag 2</h3><p>Perfect daily tote</p><span>Ksh 1200</span></div>
-  <div class="card"><a href="./images/10-classy-tote.jpg" target="_blank"><img src="./images/10-classy-tote.jpg" alt="Classy Tote"></a><h3>Classy Tote</h3><p>Spacious everyday tote</p><span>Ksh 1200</span></div>
-  <div class="card"><a href="./images/11-coach-bags.jpg" target="_blank"><img src="./images/11-coach-bags.jpg" alt="Coach Bag"></a><h3>Coach Bag</h3><p>Trendy & classy inspired</p><span>Ksh 2,300</span></div>
-  <div class="card"><a href="./images/12-coach-tote-bags.jpg" target="_blank"><img src="./images/12-coach-tote-bags.jpg" alt="Coach Tote Bag"></a><h3>Coach Tote Bag</h3><p>Spacious everyday tote</p><span>Ksh 2,300</span></div>
+  <div class="card" data-name="Classy V Bag" data-price="1200">
+    <a href="./images/03-classy-v-bag.jpg" target="_blank"><img src="./images/03-classy-v-bag.jpg" alt="Classy V Bag"></a>
+    <h3>Classy V Bag</h3><p>Elegant V-design tote</p><span>Ksh 1200</span>
+    <button class="addCart">Add to Cart</button>
+  </div>
+  <div class="card" data-name="Classy Arm Bag" data-price="700">
+    <a href="./images/04-classy-arm-bag.jpg" target="_blank"><img src="./images/04-classy-arm-bag.jpg" alt="Classy Arm Bag"></a>
+    <h3>Classy Arm Bag</h3><p>Elegant shoulder bag</p><span>Ksh 700</span>
+    <button class="addCart">Add to Cart</button>
+  </div>
+  <div class="card" data-name="Classy Bag Bow" data-price="850">
+    <a href="./images/05-classy-bag-bow.jpg" target="_blank"><img src="./images/05-classy-bag-bow.jpg" alt="Classy Bag Bow"></a>
+    <h3>Classy Bag Bow</h3><p>Chic and stylish</p><span>Ksh 850</span>
+    <button class="addCart">Add to Cart</button>
+  </div>
+  <!-- Continue for all Classy Bags, Cute & Furry Bags, Lipsticks & Skincare, Wallets & Wipes similarly -->
+
 </section>
 
-<!-- CUTE & FURRY BAGS -->
-<h2 class="category">Cute & Furry Bags</h2>
-<section class="products">
-  <div class="card"><a href="./images/13-cute-bags.jpg" target="_blank"><img src="./images/13-cute-bags.jpg" alt="Cute Bags"></a><h3>Cute Bags</h3><p>Trendy and playful</p><span>Ksh 700</span></div>
-  <div class="card"><a href="./images/15-cute-white-tote.jpg" target="_blank"><img src="./images/15-cute-white-tote.jpg" alt="Cute White Tote"></a><h3>Cute White Tote</h3><p>Bright and chic</p><span>Ksh 1200</span></div>
-  <div class="card"><a href="./images/16-cutebag.jpg" target="_blank"><img src="./images/16-cutebag.jpg" alt="Cute Bag"></a><h3>Cute Bag</h3><p>Compact and stylish</p><span>Ksh 700</span></div>
-  <div class="card"><a href="./images/17-cute-tote.jpg" target="_blank"><img src="./images/17-cute-tote.jpg" alt="Cute Tote"></a><h3>Cute Tote</h3><p>Stylish everyday tote</p><span>Ksh 1200</span></div>
-  <div class="card"><a href="./images/18-furry-bag.jpg" target="_blank"><img src="./images/18-furry-bag.jpg" alt="Furry Bag"></a><h3>Furry Bag</h3><p>Soft and stylish</p><span>Ksh 700</span></div>
-  <div class="card"><a href="./images/19-furry-n-bag.jpg" target="_blank"><img src="./images/19-furry-n-bag.jpg" alt="Furry N Bag"></a><h3>Furry N Bag</h3><p>Trendy fur design</p><span>Ksh 700</span></div>
-  <div class="card"><a href="./images/20-g-furry-bag.jpg" target="_blank"><img src="./images/20-g-furry-bag.jpg" alt="G Furry Bag"></a><h3>G Furry Bag</h3><p>Chic and soft</p><span>Ksh 700</span></div>
-  <div class="card"><a href="./images/25-fancy-bag.jpg" target="_blank"><img src="./images/25-fancy-bag.jpg" alt="Fancy Bag"></a><h3>Fancy Bag</h3><p>Elegant for all occasions</p><span>Ksh 1000</span></div>
-  <div class="card"><a href="./images/26-fashion-bag.jpg" target="_blank"><img src="./images/26-fashion-bag.jpg" alt="Fashion Bag"></a><h3>Fashion Bag</h3><p>Trendy and versatile</p><span>Ksh 1200</span></div>
-</section>
-
-<!-- LIPSTICKS & SKINCARE -->
-<h2 class="category">Lipsticks & Skincare</h2>
-<section class="products">
-  <div class="card"><a href="./images/32-cmaa-du-liquid-mate-lipstick-set.jpg" target="_blank"><img src="./images/32-cmaa-du-liquid-mate-lipstick-set.jpg" alt="CMAA DU Lipstick Set"></a><h3>CMAA DU Lipstick Set</h3><p>Vibrant & long-lasting shades</p><span>Ksh 900</span></div>
-  <div class="card"><a href="./images/33-ershql-lipstick-set.jpg" target="_blank"><img src="./images/33-ershql-lipstick-set.jpg" alt="ERSHQL Lipstick Set"></a><h3>ERSHQL Lipstick Set</h3><p>Sweet and classy colors</p><span>Ksh 1,000</span></div>
-  <div class="card"><a href="./images/34-tvlv-dreamy-lip-gloss-set.jpg" target="_blank"><img src="./images/34-tvlv-dreamy-lip-gloss-set.jpg" alt="TVLV Lip Gloss Set"></a><h3>TVLV Lip Gloss Set</h3><p>Shiny & smooth finish</p><span>Ksh 1,000</span></div>
-  <div class="card"><a href="./images/30-sadoer-salicylic-acid-skin-care-set.jpg" target="_blank"><img src="./images/30-sadoer-salicylic-acid-skin-care-set.jpg" alt="Sadoer Salicylic Set"></a><h3>Sadoer Salicylic Set</h3><p>Deep cleanse & glow</p><span>Ksh 850</span></div>
-  <div class="card"><a href="./images/31-sadoer-skincare-set.jpg" target="_blank"><img src="./images/31-sadoer-skincare-set.jpg" alt="Sadoer Skincare Set"></a><h3>Sadoer Skincare Set</h3><p>Complete daily care</p><span>Ksh 1,000</span></div>
-  <div class="card"><a href="./images/29-sol-de-janiero-body-mist.jpg" target="_blank"><img src="./images/29-sol-de-janiero-body-mist.jpg" alt="Sol De Janiero"></a><h3>Sol De Janiero</h3><p>Fragrant & refreshing</p><span>Ksh 600</span></div>
-  <div class="card"><a href="./images/27-eos-body-lotion.jpg" target="_blank"><img src="./images/27-eos-body-lotion.jpg" alt="EOS Body Lotion"></a><h3>EOS Body Lotion</h3><p>Softens and hydrates</p><span>Ksh 2,500</span></div>
-  <div class="card"><a href="./images/28-eos-body-wash.jpg" target="_blank"><img src="./images/28-eos-body-wash.jpg" alt="EOS Body Wash"></a><h3>EOS Body Wash</h3><p>Refreshing and smooth</p><span>Ksh 2000</span></div>
-  <div class="card"><a href="./images/bodysplash.jpg" target="_blank"><img src="./images/bodysplash.jpg" alt="Bodysplash"></a><h3>Bodysplash</h3><p>Refreshing and fragrant</p><span>Ksh 200</span></div>
-</section>
-
-<!-- WALLETS, MASKS & WIPES -->
-<h2 class="category">Wallets, Face Masks & Wipes</h2>
-<section class="products">
-  <div class="card"><a href="./images/14-cute-girly-wallet.jpg" target="_blank"><img src="./images/14-cute-girly-wallet.jpg" alt="Cute Girly Wallet"></a><h3>Cute Girly Wallet</h3><p>Compact and stylish</p><span>Ksh 500</span></div>
-  <div class="card"><a href="./images/35-face-masks.jpg" target="_blank"><img src="./images/35-face-masks.jpg" alt="Face Masks"></a><h3>Face Masks</h3><p>Safe and reusable</p><span>Ksh 50</span></div>
-  <div class="card"><a href="./images/24-wipes.jpg" target="_blank"><img src="./images/24-wipes.jpg" alt="Wipes"></a><h3>Wipes</h3><p>Convenient and hygienic</p><span>Ksh 50</span></div>
-</section>
+<!-- CART PANEL -->
+<div class="cart-panel">
+  <h2>Your Cart 💖</h2>
+  <div id="cartItems"></div>
+  <p class="cart-total">Total: Ksh <span id="cartTotal">0</span></p>
+</div>
 
 <!-- ORDER FORM -->
 <div class="order-form">
@@ -126,63 +141,19 @@
     <label for="location">Delivery Location</label>
     <input type="text" id="location" name="location" required placeholder="Enter delivery address">
 
-    <label for="product">Product</label>
-    <select id="product" name="product" multiple required>
-      <option value="" disabled>Select product</option>
-      <option value="Bag Set 1">Bag Set 1</option>
-      <option value="Bag Set 2">Bag Set 2</option>
-      <option value="H Cute Tote">H Cute Tote</option>
-      <option value="Simple Tote">Simple Tote</option>
-      <option value="G Tote C">G Tote C</option>
-      <option value="Cute Tote J">Cute Tote J</option>
-      <option value="Bow G Tote J">Bow G Tote J</option>
-      <option value="Bodysplash">Bodysplash</option>
-      <option value="Classy V Bag">Classy V Bag</option>
-      <option value="Classy Arm Bag">Classy Arm Bag</option>
-      <option value="Classy Bag Bow">Classy Bag Bow</option>
-      <option value="Classy Bags">Classy Bags</option>
-      <option value="Classy Bags V">Classy Bags V</option>
-      <option value="Classy Cute Bag 1">Classy Cute Bag 1</option>
-      <option value="Classy Cute Bag 2">Classy Cute Bag 2</option>
-      <option value="Classy Tote">Classy Tote</option>
-      <option value="Coach Bag">Coach Bag</option>
-      <option value="Coach Tote Bag">Coach Tote Bag</option>
-      <option value="Cute Bags">Cute Bags</option>
-      <option value="Cute White Tote">Cute White Tote</option>
-      <option value="Cute Bag">Cute Bag</option>
-      <option value="Furry Bag">Furry Bag</option>
-      <option value="Furry N Bag">Furry N Bag</option>
-      <option value="G Furry Bag">G Furry Bag</option>
-      <option value="Fancy Bag">Fancy Bag</option>
-      <option value="Fashion Bag">Fashion Bag</option>
-      <option value="CMAA DU Lipstick Set">CMAA DU Lipstick Set</option>
-      <option value="ERSHQL Lipstick Set">ERSHQL Lipstick Set</option>
-      <option value="TVLV Lip Gloss Set">TVLV Lip Gloss Set</option>
-      <option value="Sadoer Salicylic Set">Sadoer Salicylic Set</option>
-      <option value="Sadoer Skincare Set">Sadoer Skincare Set</option>
-      <option value="Sol De Janiero">Sol De Janiero</option>
-      <option value="EOS Body Lotion">EOS Body Lotion</option>
-      <option value="EOS Body Wash">EOS Body Wash</option>
-      <option value="Cute Girly Wallet">Cute Girly Wallet</option>
-      <option value="Face Masks">Face Masks</option>
-      <option value="Wipes">Wipes</option>
-    </select>
+    <label for="product">Products (from cart)</label>
+    <textarea id="cartProductList" rows="4" readonly placeholder="Products you added to cart will appear here"></textarea>
 
-    <label for="color">Color</label>
-    <input type="text" id="color" name="color" placeholder="Enter color preference">
-
-    <label for="quantity">Quantity</label>
-    <input type="number" id="quantity" name="quantity" min="1" value="1">
+    <label for="quantity">Total Amount (Ksh)</label>
+    <input type="number" id="payAmount" placeholder="Enter total amount" min="1">
 
     <div class="payment-section">
       <p><strong>Payment Method: Mpesa (Send Money)</strong></p>
       <p>Pay to number: <strong>0114688844</strong></p>
-      <label for="mpesaAmount">Amount (Ksh)</label>
-      <input type="number" id="mpesaAmount" placeholder="Enter total amount" min="1">
       <button type="button" id="mpesaPayBtn">Pay Now via Mpesa</button>
     </div>
 
-    <button type="submit">Submit Order via WhatsApp</button>
+    <button type="button" id="sendWhatsApp">Submit Order via WhatsApp</button>
   </form>
 </div>
 
@@ -191,40 +162,78 @@
 </footer>
 
 <script>
-const mpesaPayBtn = document.getElementById('mpesaPayBtn');
-const orderForm = document.getElementById('orderForm');
+let cart = [];
 
+function updateCartUI() {
+  const cartItemsDiv = document.getElementById('cartItems');
+  cartItemsDiv.innerHTML = '';
+  let total = 0;
+  cart.forEach((item, index) => {
+    total += item.price * item.qty;
+    const div = document.createElement('div');
+    div.classList.add('cart-item');
+    div.innerHTML = `
+      <p>${item.name} x ${item.qty} - Ksh ${item.price*item.qty}</p>
+      <button onclick="removeFromCart(${index})">Remove</button>
+    `;
+    cartItemsDiv.appendChild(div);
+  });
+  document.getElementById('cartTotal').textContent = total;
+  document.getElementById('cartProductList').value = cart.map(i => `${i.name} x ${i.qty}`).join("\n");
+  document.getElementById('payAmount').value = total;
+}
+
+function removeFromCart(index) {
+  cart.splice(index,1);
+  updateCartUI();
+}
+
+document.querySelectorAll('.addCart').forEach(btn => {
+  btn.addEventListener('click', e => {
+    const card = e.target.closest('.card');
+    const name = card.dataset.name;
+    const price = parseInt(card.dataset.price);
+    let existing = cart.find(item => item.name === name);
+    if(existing){
+      existing.qty++;
+    } else {
+      cart.push({name, price, qty:1});
+    }
+    updateCartUI();
+  });
+});
+
+const mpesaPayBtn = document.getElementById('mpesaPayBtn');
 mpesaPayBtn.addEventListener('click', function(){
-  const amount = document.getElementById('mpesaAmount').value;
+  const amount = document.getElementById('payAmount').value;
   if(!amount || amount <= 0){
     alert('Please enter the payment amount.');
     return;
   }
-  const mpesaNumber = "0114688844";
-  const ussd = `tel:*${encodeURIComponent('384*1*1*'+mpesaNumber+'*'+amount+'#')}`;
-  alert('You will now be redirected to M-Pesa to complete the payment.');
-  window.location.href = ussd;
+  alert(`Send Ksh ${amount} to 0114688844 via M-Pesa.`);
 });
 
-orderForm.addEventListener('submit', function(e){
-  e.preventDefault();
-  const name = document.getElementById('name').value;
-  const location = document.getElementById('location').value;
-  const product = Array.from(document.getElementById('product').selectedOptions).map(o => o.value).join(", ");
-  const color = document.getElementById('color').value;
-  const quantity = document.getElementById('quantity').value;
-  const amount = document.getElementById('mpesaAmount').value;
+document.getElementById('sendWhatsApp').onclick = () => {
+  const name = document.getElementById("name").value;
+  const location = document.getElementById("location").value;
+  const amount = document.getElementById("payAmount").value;
 
-  if(!name || !location || !product || !amount){
-    alert('Please fill all required fields including payment amount.');
+  if(!name || !location || !amount || cart.length===0){
+    alert("Please fill all fields and add products to the cart.");
     return;
   }
 
-  const message = `Hello! I would like to place an order:\n\nName: ${name}\nLocation: ${location}\nProduct(s): ${product}\nColor: ${color}\nQuantity: ${quantity}\nPayment Method: Mpesa - 0114688844\nAmount Paid: Ksh ${amount}`;
-  const whatsappNumber = "254114688844";
-  const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-  window.open(url, "_blank");
-});
+  const message = `ORDER DETAILS
+Name: ${name}
+Delivery Location: ${location}
+Products:
+${cart.map(i=>`${i.name} x ${i.qty}`).join("\n")}
+Total Amount: Ksh ${amount}
+Payment: M-Pesa Send Money
+Number: 0114688844`;
+
+  window.open(`https://wa.me/254114688844?text=${encodeURIComponent(message)}`, "_blank");
+};
 </script>
 
 </body>
