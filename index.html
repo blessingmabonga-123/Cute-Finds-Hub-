@@ -7,9 +7,11 @@
 <style>
   * { box-sizing: border-box; font-family: Arial, sans-serif; }
   body { margin: 0; background: #fff0f6; }
+
   header { background: #ff69b4; color: white; text-align: center; padding: 25px; }
   header h1 { margin: 0; font-size: 32px; }
   header p { margin: 5px 0 0; font-size: 16px; }
+
   h2.category { color: #ff1493; margin-left: 30px; margin-top: 30px; }
   .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding: 20px 30px; }
   .card { background: white; border-radius: 15px; padding: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.2s; }
@@ -18,16 +20,23 @@
   .card h3 { color: #ff1493; margin: 10px 0 5px; font-size: 18px; }
   .card p { color: #555; font-size: 14px; margin: 0 0 8px; }
   .card span { display: block; color: #ff1493; font-weight: bold; font-size: 16px; margin-bottom: 5px; }
-  footer { background: #ffc0cb; text-align: center; padding: 15px; color: white; font-size: 14px; }
   a { text-decoration: none; color: inherit; }
+
+  footer { background: #ffc0cb; text-align: center; padding: 15px; color: white; font-size: 14px; }
 
   /* Order Form */
   .order-form { max-width: 600px; margin: 40px auto; background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
   .order-form h2 { text-align: center; color: #ff1493; margin-bottom: 20px; }
   .order-form label { display: block; margin-bottom: 5px; font-weight: bold; }
   .order-form input, .order-form select { width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc; }
-  .order-form button { width: 100%; padding: 12px; background: #25D366; color: white; border: none; border-radius: 10px; cursor: pointer; font-size: 16px; }
+  .order-form select[multiple] { height: 180px; }
+  .order-form button { width: 100%; padding: 12px; background: #25D366; color: white; border: none; border-radius: 10px; cursor: pointer; font-size: 16px; margin-bottom: 10px; }
   .order-form button:hover { background: #128C7E; }
+
+  .payment-section { margin-bottom: 15px; text-align: center; }
+  .payment-section button { background: #ff1493; color: white; border: none; border-radius: 10px; padding: 12px 20px; cursor: pointer; font-size: 16px; margin-top: 10px; }
+  .payment-section button:hover { background: #c7007b; }
+
   .payment-info { text-align: center; margin-top: 15px; font-size: 16px; color: #555; }
 </style>
 </head>
@@ -38,6 +47,7 @@
   <p>Pretty finds • Affordable • Fast delivery 💗</p>
 </header>
 
+<!-- PRODUCT CATALOG -->
 <!-- BAG SETS -->
 <h2 class="category">Bag Sets</h2>
 <section class="products">
@@ -53,7 +63,6 @@
   <div class="card"><a href="./images/21-g-tote-bag.jpg" target="_blank"><img src="./images/21-g-tote-bag.jpg" alt="G Tote C"></a><h3>G Tote C</h3><p>Trendy and functional</p><span>Ksh 900</span></div>
   <div class="card"><a href="./images/36-cute-tote-j.jpg" target="_blank"><img src="./images/36-cute-tote-j.jpg" alt="Cute Tote J"></a><h3>Cute Tote J</h3><p>Perfect for daily use</p><span>Ksh 1200</span></div>
   <div class="card"><a href="./images/37-bow-g-tote-j.jpg" target="_blank"><img src="./images/37-bow-g-tote-j.jpg" alt="Bow G Tote J"></a><h3>Bow G Tote J</h3><p>Elegant bow design tote</p><span>Ksh 1,200</span></div>
-  <div class="card"><a href="./images/bodysplash.jpg" target="_blank"><img src="./images/bodysplash.jpg" alt="Bodysplash"></a><h3>Bodysplash</h3><p>Refreshing and fragrant</p><span>Ksh 200</span></div>
 </section>
 
 <!-- CLASSY BAGS -->
@@ -77,6 +86,7 @@
   <div class="card"><a href="./images/13-cute-bags.jpg" target="_blank"><img src="./images/13-cute-bags.jpg" alt="Cute Bags"></a><h3>Cute Bags</h3><p>Trendy and playful</p><span>Ksh 700</span></div>
   <div class="card"><a href="./images/15-cute-white-tote.jpg" target="_blank"><img src="./images/15-cute-white-tote.jpg" alt="Cute White Tote"></a><h3>Cute White Tote</h3><p>Bright and chic</p><span>Ksh 1200</span></div>
   <div class="card"><a href="./images/16-cutebag.jpg" target="_blank"><img src="./images/16-cutebag.jpg" alt="Cute Bag"></a><h3>Cute Bag</h3><p>Compact and stylish</p><span>Ksh 700</span></div>
+  <div class="card"><a href="./images/17-cute-tote.jpg" target="_blank"><img src="./images/17-cute-tote.jpg" alt="Cute Tote"></a><h3>Cute Tote</h3><p>Stylish everyday tote</p><span>Ksh 1200</span></div>
   <div class="card"><a href="./images/18-furry-bag.jpg" target="_blank"><img src="./images/18-furry-bag.jpg" alt="Furry Bag"></a><h3>Furry Bag</h3><p>Soft and stylish</p><span>Ksh 700</span></div>
   <div class="card"><a href="./images/19-furry-n-bag.jpg" target="_blank"><img src="./images/19-furry-n-bag.jpg" alt="Furry N Bag"></a><h3>Furry N Bag</h3><p>Trendy fur design</p><span>Ksh 700</span></div>
   <div class="card"><a href="./images/20-g-furry-bag.jpg" target="_blank"><img src="./images/20-g-furry-bag.jpg" alt="G Furry Bag"></a><h3>G Furry Bag</h3><p>Chic and soft</p><span>Ksh 700</span></div>
@@ -95,6 +105,7 @@
   <div class="card"><a href="./images/29-sol-de-janiero-body-mist.jpg" target="_blank"><img src="./images/29-sol-de-janiero-body-mist.jpg" alt="Sol De Janiero"></a><h3>Sol De Janiero</h3><p>Fragrant & refreshing</p><span>Ksh 600</span></div>
   <div class="card"><a href="./images/27-eos-body-lotion.jpg" target="_blank"><img src="./images/27-eos-body-lotion.jpg" alt="EOS Body Lotion"></a><h3>EOS Body Lotion</h3><p>Softens and hydrates</p><span>Ksh 2,500</span></div>
   <div class="card"><a href="./images/28-eos-body-wash.jpg" target="_blank"><img src="./images/28-eos-body-wash.jpg" alt="EOS Body Wash"></a><h3>EOS Body Wash</h3><p>Refreshing and smooth</p><span>Ksh 2000</span></div>
+  <div class="card"><a href="./images/bodysplash.jpg" target="_blank"><img src="./images/bodysplash.jpg" alt="Bodysplash"></a><h3>Bodysplash</h3><p>Refreshing and fragrant</p><span>Ksh 200</span></div>
 </section>
 
 <!-- WALLETS, MASKS & WIPES -->
@@ -116,8 +127,8 @@
     <input type="text" id="location" name="location" required placeholder="Enter delivery address">
 
     <label for="product">Product</label>
-    <select id="product" name="product" required>
-      <option value="" disabled selected>Select product</option>
+    <select id="product" name="product" multiple required>
+      <option value="" disabled>Select product</option>
       <option value="Bag Set 1">Bag Set 1</option>
       <option value="Bag Set 2">Bag Set 2</option>
       <option value="H Cute Tote">H Cute Tote</option>
@@ -163,9 +174,12 @@
     <label for="quantity">Quantity</label>
     <input type="number" id="quantity" name="quantity" min="1" value="1">
 
-    <div class="payment-info">
-      <p>Payment Method: Send Money</p>
-      <p>Contact/Payment Number: 0114688844</p>
+    <div class="payment-section">
+      <p><strong>Payment Method: Mpesa (Send Money)</strong></p>
+      <p>Pay to number: <strong>0114688844</strong></p>
+      <label for="mpesaAmount">Amount (Ksh)</label>
+      <input type="number" id="mpesaAmount" placeholder="Enter total amount" min="1">
+      <button type="button" id="mpesaPayBtn">Pay Now via Mpesa</button>
     </div>
 
     <button type="submit">Submit Order via WhatsApp</button>
@@ -177,27 +191,41 @@
 </footer>
 
 <script>
-document.getElementById('orderForm').addEventListener('submit', function(e){
+const mpesaPayBtn = document.getElementById('mpesaPayBtn');
+const orderForm = document.getElementById('orderForm');
+
+mpesaPayBtn.addEventListener('click', function(){
+  const amount = document.getElementById('mpesaAmount').value;
+  if(!amount || amount <= 0){
+    alert('Please enter the payment amount.');
+    return;
+  }
+  const mpesaNumber = "0114688844";
+  const ussd = `tel:*${encodeURIComponent('384*1*1*'+mpesaNumber+'*'+amount+'#')}`;
+  alert('You will now be redirected to M-Pesa to complete the payment.');
+  window.location.href = ussd;
+});
+
+orderForm.addEventListener('submit', function(e){
   e.preventDefault();
   const name = document.getElementById('name').value;
   const location = document.getElementById('location').value;
-  const product = document.getElementById('product').value;
+  const product = Array.from(document.getElementById('product').selectedOptions).map(o => o.value).join(", ");
   const color = document.getElementById('color').value;
   const quantity = document.getElementById('quantity').value;
-  
-  const message = `Hello! I would like to place an order:\n\nName: ${name}\nLocation: ${location}\nProduct: ${product}\nColor: ${color}\nQuantity: ${quantity}\n\nPayment Method: Send Money\nContact: 0114688844`;
-  
-  const whatsappNumber = "254114688844"; // Kenya country code
+  const amount = document.getElementById('mpesaAmount').value;
+
+  if(!name || !location || !product || !amount){
+    alert('Please fill all required fields including payment amount.');
+    return;
+  }
+
+  const message = `Hello! I would like to place an order:\n\nName: ${name}\nLocation: ${location}\nProduct(s): ${product}\nColor: ${color}\nQuantity: ${quantity}\nPayment Method: Mpesa - 0114688844\nAmount Paid: Ksh ${amount}`;
+  const whatsappNumber = "254114688844";
   const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-  
   window.open(url, "_blank");
 });
 </script>
 
 </body>
 </html>
-
-
-
-
-
