@@ -1,55 +1,53 @@
-⁷<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Cute Finds Hub 💖</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  * { box-sizing: border-box; font-family: Arial, sans-serif; }
-  body { margin: 0; background: #fff0f6; }
+* { box-sizing: border-box; font-family: Arial, sans-serif; }
+body { margin: 0; background: #fff0f6; }
 
-  header { background: #ff69b4; color: white; text-align: center; padding: 25px; }
-  header h1 { margin: 0; font-size: 32px; }
-  header p { margin: 5px 0 0; font-size: 16px; }
+header { background: #ff69b4; color: white; text-align: center; padding: 25px; }
+header h1 { margin: 0; font-size: 32px; }
+header p { margin: 5px 0 0; font-size: 16px; }
 
-  h2.category { color: #ff1493; margin-left: 30px; margin-top: 30px; }
-  .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding: 20px 30px; }
-  .card { background: white; border-radius: 15px; padding: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.2s; }
-  .card:hover { transform: translateY(-5px); }
-  .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; cursor: pointer; }
-  .card h3 { color: #ff1493; margin: 10px 0 5px; font-size: 18px; }
-  .card p { color: #555; font-size: 14px; margin: 0 0 8px; }
-  .card span { display: block; color: #ff1493; font-weight: bold; font-size: 16px; margin-bottom: 5px; }
-  .card button { padding: 8px 12px; background: #ff1493; color: white; border: none; border-radius: 8px; cursor: pointer; }
-  .card button:hover { background: #c7007b; }
-  a { text-decoration: none; color: inherit; }
+.categories { text-align:center; margin:20px 0; }
+.categories button { background:#ff1493; color:white; border:none; border-radius:8px; padding:10px 15px; margin:5px; cursor:pointer; }
+.categories button:hover { background:#c7007b; }
 
-  footer { background: #ffc0cb; text-align: center; padding: 15px; color: white; font-size: 14px; }
+.products { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:20px; padding:0 30px; }
+.card { background:white; border-radius:15px; padding:15px; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.1); transition: transform 0.2s; }
+.card:hover { transform:translateY(-5px); }
+.card img { width:100%; height:200px; object-fit:cover; border-radius:10px; cursor:pointer; }
+.card h3 { color:#ff1493; margin:10px 0 5px; font-size:16px; cursor:pointer; }
+.card span { display:block; color:#ff1493; font-weight:bold; font-size:16px; margin-bottom:5px; }
+.card button { padding:8px 12px; background:#ff1493; color:white; border:none; border-radius:8px; cursor:pointer; }
+.card button:hover { background:#c7007b; }
 
-  /* Cart Panel */
-  .cart-panel { position: fixed; top: 80px; right: 0; width: 300px; max-height: 80vh; overflow-y: auto; background: white; border-left: 2px solid #ff1493; padding: 15px; box-shadow: -4px 0 10px rgba(0,0,0,0.1); z-index: 100; }
-  .cart-panel h2 { color: #ff1493; font-size: 20px; margin-top: 0; text-align: center; }
-  .cart-item { display: flex; justify-content: space-between; margin-bottom: 10px; align-items: center; }
-  .cart-item p { margin: 0; font-size: 14px; }
-  .cart-item button { background: #ff1493; color: white; border: none; border-radius: 5px; padding: 3px 6px; cursor: pointer; }
-  .cart-item button:hover { background: #c7007b; }
-  .cart-total { font-weight: bold; margin-top: 10px; color: #ff1493; text-align: center; }
+footer { background:#ffc0cb; text-align:center; padding:15px; color:white; font-size:14px; }
 
-  /* Order Form */
-  .order-form { max-width: 600px; margin: 40px auto; background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-  .order-form h2 { text-align: center; color: #ff1493; margin-bottom: 20px; }
-  .order-form label { display: block; margin-bottom: 5px; font-weight: bold; }
-  .order-form input, .order-form textarea { width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc; }
-  .order-form textarea { resize: none; }
+.cart-panel { position: fixed; top:80px; right:0; width:300px; max-height:80vh; overflow-y:auto; background:white; border-left:2px solid #ff1493; padding:15px; box-shadow:-4px 0 10px rgba(0,0,0,0.1); z-index:100; }
+.cart-panel h2 { color:#ff1493; font-size:20px; margin-top:0; text-align:center; }
+.cart-item { display:flex; justify-content:space-between; margin-bottom:10px; align-items:center; }
+.cart-item p { margin:0; font-size:14px; }
+.cart-item button { background:#ff1493; color:white; border:none; border-radius:5px; padding:3px 6px; cursor:pointer; }
+.cart-item button:hover { background:#c7007b; }
+.cart-total { font-weight:bold; margin-top:10px; color:#ff1493; text-align:center; }
 
-  .order-form button { width: 100%; padding: 12px; background: #25D366; color: white; border: none; border-radius: 10px; cursor: pointer; font-size: 16px; margin-bottom: 10px; }
-  .order-form button:hover { background: #128C7E; }
+.order-form { max-width:600px; margin:40px auto; background:white; padding:25px; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+.order-form h2 { text-align:center; color:#ff1493; margin-bottom:20px; }
+.order-form label { display:block; margin-bottom:5px; font-weight:bold; }
+.order-form input, .order-form textarea { width:100%; padding:10px; margin-bottom:15px; border-radius:8px; border:1px solid #ccc; }
+.order-form textarea { resize:none; }
 
-  .payment-section { margin-bottom: 15px; text-align: center; }
-  .payment-section button { background: #ff1493; color: white; border: none; border-radius: 10px; padding: 12px 20px; cursor: pointer; font-size: 16px; margin-top: 10px; }
-  .payment-section button:hover { background: #c7007b; }
+.order-form button { width:100%; padding:12px; background:#25D366; color:white; border:none; border-radius:10px; cursor:pointer; font-size:16px; margin-bottom:10px; }
+.order-form button:hover { background:#128C7E; }
 
-  .payment-info { text-align: center; margin-top: 15px; font-size: 16px; color: #555; }
+.payment-section { margin-bottom:15px; text-align:center; }
+.payment-section button { background:#ff1493; color:white; border:none; border-radius:10px; padding:12px 20px; cursor:pointer; font-size:16px; margin-top:10px; }
+.payment-section button:hover { background:#c7007b; }
+.payment-info { text-align:center; margin-top:15px; font-size:16px; color:#555; }
 </style>
 </head>
 <body>
@@ -59,218 +57,99 @@
   <p>Pretty finds • Affordable • Fast delivery 💗</p>
 </header>
 
-<!-- PRODUCTS SECTIONS -->
+<div class="categories">
+  <button onclick="filterCategory('all')">All</button>
+  <button onclick="filterCategory('bags')">Bags</button>
+  <button onclick="filterCategory('wallets')">Wallets</button>
+  <button onclick="filterCategory('skincare')">Skincare</button>
+  <button onclick="filterCategory('makeup')">Makeup</button>
+  <button onclick="filterCategory('electronics')">Electronics</button>
+  <button onclick="filterCategory('accessories')">Accessories</button>
+</div>
 
-<h2 class="category">Bag Sets</h2>
 <section class="products">
-  <div class="card" data-name="Bag Set 1" data-price="2000">
-    <a href="./images/01-bag-set.jpg" target="_blank"><img src="./images/01-bag-set.jpg" alt="Bag Set 1"></a>
-    <h3>Bag Set 1</h3><p>Complete stylish collection</p><span>Ksh 2000</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="Bag Set 2" data-price="2000">
-    <a href="./images/02-bag-set-2.jpg" target="_blank"><img src="./images/02-bag-set-2.jpg" alt="Bag Set 2"></a>
-    <h3>Bag Set 2</h3><p>Trendy versatile collection</p><span>Ksh 2000</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
+
+<!-- ==================== BAGS ==================== -->
+<div class="card" data-category="bags"><img src="images/01-bag-set.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">01-bag-set</h3><span>2000</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="bags"><img src="images/02-bag-set-2.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">02-bag-set-2</h3><span>2000</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="bags"><img src="images/03-classy-v-bag.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">03-classy-v-bag</h3><span>1200</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="bags"><img src="images/04-classy-arm-bag.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">04-classy-arm-bag</h3><span>700</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="bags"><img src="images/05-classy-bag-bow.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">05-classy-bag-bow</h3><span>1300</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="bags"><img src="images/06-classy-bags.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">06-classy-bags</h3><span>1300</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="bags"><img src="images/07-classy-bags-v.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">07-classy-bags-v</h3><span>700</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="bags"><img src="images/08-classy-cute-bag-1.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">08-classy-cute-bag-1</h3><span>700</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="bags"><img src="images/09-classy-cute-bag-2.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">09-classy-cute-bag-2</h3><span>1500</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="bags"><img src="images/10-classy-tote.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">10-classy-tote</h3><span>1200</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="bags"><img src="images/11-coach-bags.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">11-coach-bags</h3><span>2300</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="bags"><img src="images/12-coach-tote-bags.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">12-coach-tote-bags</h3><span>2300</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="bags"><img src="images/13-cute-bags.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">13-cute-bags</h3><span>700</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="bags"><img src="images/15-cute-white-tote.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">15-cute-white-tote</h3><span>1200</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="bags"><img src="images/16-cutebag.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">16-cutebag</h3><span>700</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="bags"><img src="images/17-cute-tote.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">17-cute-tote</h3><span>1200</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="bags"><img src="images/18-furry-bag.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">18-furry-bag</h3><span>700</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="bags"><img src="images/19-furry-n-bag.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">19-furry-n-bag</h3><span>700</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="bags"><img src="images/20-g-furry-bag.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">20-g-furry-bag</h3><span>700</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="bags"><img src="images/21-g-tote-bag.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">21-g-tote-bag</h3><span>900</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="bags"><img src="images/22-h-cute-tote-bag.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">22-h-cute-tote-bag</h3><span>1200</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="bags"><img src="images/23-simple-tote.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">23-simple-tote</h3><span>1000</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="bags"><img src="images/25-fancy-bag.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">25-fancy-bag</h3><span>1000</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="bags"><img src="images/26-fashion-bag.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">26-fashion-bag</h3><span>1500</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="bags"><img src="images/36-cute-tote-j.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">36-cute-tote-j</h3><span>1200</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="bags"><img src="images/37-bow-g-tote-j.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">37-bow-g-tote-j</h3><span>1200</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="bags"><img src="images/office bag.jpeg" onclick="openModal(this)"><h3 onclick="openModal(this)">Office Bag</h3><span>1300</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="bags"><img src="images/printtttt bag.jpg.jpeg" onclick="openModal(this)"><h3 onclick="openModal(this)">Printtttt Bag</h3><span>700</span><button onclick="addToCart(this)">Add to Cart</button></div>
+
+<!-- ==================== WALLETS ==================== -->
+<div class="card" data-category="wallets"><img src="images/14-cute-girly-wallet.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">14-cute-girly-wallet</h3><span>500</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="wallets"><img src="images/classy cute wallet.jpg.jpeg" onclick="openModal(this)"><h3 onclick="openModal(this)">Classy Cute Wallet</h3><span>500</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="wallets"><img src="images/classy wallet.jpeg" onclick="openModal(this)"><h3 onclick="openModal(this)">Classy Wallet</h3><span>500</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="wallets"><img src="images/wallet.jpeg" onclick="openModal(this)"><h3 onclick="openModal(this)">Wallet</h3><span>500</span><button onclick="addToCart(this)">Add to Cart</button></div>
+
+<!-- ==================== SKINCARE ==================== -->
+<div class="card" data-category="skincare"><img src="images/27-eos-body-lotion.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">27-eos-body-lotion</h3><span>2500</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="skincare"><img src="images/28-eos-body-wash.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">28-eos-body-wash</h3><span>2000</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="skincare"><img src="images/29-sol-de-janiero-body-mist.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">29-sol-de-janiero-body-mist</h3><span>600</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="skincare"><img src="images/30-sadoer-salicylic-acid-skin-care-set.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">30-sadoer-salicylic-acid-skin-care-set</h3><span>850</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="skincare"><img src="images/31-sadoer-skincare-set.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">31-sadoer-skincare-set</h3><span>1250</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="skincare"><img src="images/35-face-masks.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">35-face-masks</h3><span>50</span><button onclick="addToCart(this)">Add to Cart</button></div>
+
+<!-- ==================== MAKEUP ==================== -->
+<div class="card" data-category="makeup"><img src="images/12 colors liquid lipstick gift set.jpeg" onclick="openModal(this)"><h3 onclick="openModal(this)">12 colors liquid lipstick gift set</h3><span>1000</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="makeup"><img src="images/32-cmaa-du-liquid-mate-lipstick-set.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">32-cmaa-du-liquid-mate-lipstick-set</h3><span>1000</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="makeup"><img src="images/33-ershql-lipstick-set.jpg" onclick="openModal(this)"><h3 onclick="openModal(this)">33-ershql-lipstick-set</h3><span>1000</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="accessories"><img src="images/cakaila set.jpeg" onclick="openModal(this)"><h3 onclick="openModal(this)">Cakaila Set</h3><span>1000</span><button onclick="addToCart(this)">Add to Cart</button></div>
+
+<!-- ==================== ELECTRONICS ==================== -->
+<div class="card" data-category="electronics"><img src="images/bluetooth compatible.jpeg" onclick="openModal(this)"><h3 onclick="openModal(this)">Bluetooth Compatible</h3><span>1000</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="electronics"><img src="images/bluetooth headset.jpeg" onclick="openModal(this)"><h3 onclick="openModal(this)">Bluetooth Headset</h3><span>1500</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="electronics"><img src="images/cat headphones.jpeg" onclick="openModal(this)"><h3 onclick="openModal(this)">Cat Headphones</h3><span>1600</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="electronics"><img src="images/headphones.jpeg" onclick="openModal(this)"><h3 onclick="openModal(this)">Headphones</h3><span>1000</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="electronics"><img src="images/Headset.jpeg" onclick="openModal(this)"><h3 onclick="openModal(this)">Headset</h3><span>1000</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="electronics"><img src="images/Rich rippleheadset.jpeg" onclick="openModal(this)"><h3 onclick="openModal(this)">Rich Ripple Headset</h3><span>1000</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="electronics"><img src="images/riichripplewatch set.jpeg" onclick="openModal(this)"><h3 onclick="openModal(this)">Riich Ripple Watch Set</h3><span>1700</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="electronics"><img src="images/s500 smart watch.jpeg" onclick="openModal(this)"><h3 onclick="openModal(this)">S500 Smart Watch</h3><span>1700</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="electronics"><img src="images/smart watch.jpeg" onclick="openModal(this)"><h3 onclick="openModal(this)">Smart Watch</h3><span>1700</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="electronics"><img src="images/T500 smart watch.jpeg" onclick="openModal(this)"><h3 onclick="openModal(this)">T500 Smart Watch</h3><span>1500</span><button onclick="addToCart(this)">Add to Cart</button></div>
+
+<!-- ==================== ACCESSORIES ==================== -->
+
+<div class="card" data-category="accessories"><img src="images/jewelries.jpeg" onclick="openModal(this)"><h3 onclick="openModal(this)">Jewelries</h3><span>450</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="accessories"><img src="images/necklace set.jpeg" onclick="openModal(this)"><h3 onclick="openModal(this)">Necklace Set</h3><span>450</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="accessories"><img src="images/ring set.jpeg" onclick="openModal(this)"><h3 onclick="openModal(this)">Ring Set</h3><span>450</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="accessories"><img src="images/necklace set 3.jpeg" onclick="openModal(this)"><h3 onclick="openModal(this)">necklace set 3</h3><span>600</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="accessories"><img src="images/necklace set 2.jpeg" onclick="openModal(this)"><h3 onclick="openModal(this)">necklace set 2</h3><span>450</span><button onclick="addToCart(this)">Add to Cart</button></div>
+<div class="card" data-category="accessories"><img src="images/jewellery set .jpeg"onclick="openModal(this)"><h3 onclick="openModal(this)">jewellery set </h3><span>450</span><button onclick="addToCart(this)">Add to Cart</button></div>
 </section>
 
-<h2 class="category">Special Bags</h2>
-<section class="products">
-  <div class="card" data-name="H Cute Tote" data-price="1200">
-    <a href="./images/22-h-cute-tote-bag.jpg" target="_blank"><img src="./images/22-h-cute-tote-bag.jpg" alt="H Cute Tote"></a>
-    <h3>H Cute Tote</h3><p>Adorable everyday tote</p><span>Ksh 1200</span>
-    <button class="addCart">Add to Cart</button>
+<!-- PRODUCT MODAL -->
+<div id="productModal" style="display:none; position:fixed; z-index:2000; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center;">
+  <div style="position:relative; max-width:500px; width:90%; background:white; border-radius:15px; padding:20px; text-align:center;">
+    <span style="position:absolute; top:10px; right:15px; font-size:24px; cursor:pointer; color:#ff1493;" onclick="closeModal()">&times;</span>
+    <img id="modalImg" src="" style="width:100%; border-radius:10px;">
+    <h3 id="modalTitle" style="color:#ff1493; margin:10px 0;"></h3>
+    <span id="modalPrice" style="color:#ff1493; font-weight:bold;"></span>
   </div>
-  <div class="card" data-name="Simple Tote" data-price="1000">
-    <a href="./images/23-simple-tote.jpg" target="_blank"><img src="./images/23-simple-tote.jpg" alt="Simple Tote"></a>
-    <h3>Simple Tote</h3><p>Minimalist and chic</p><span>Ksh 1000</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="G Tote C" data-price="900">
-    <a href="./images/21-g-tote-bag.jpg" target="_blank"><img src="./images/21-g-tote-bag.jpg" alt="G Tote C"></a>
-    <h3>G Tote C</h3><p>Trendy and functional</p><span>Ksh 900</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="Cute Tote J" data-price="1200">
-    <a href="./images/36-cute-tote-j.jpg" target="_blank"><img src="./images/36-cute-tote-j.jpg" alt="Cute Tote J"></a>
-    <h3>Cute Tote J</h3><p>Perfect for daily use</p><span>Ksh 1200</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="Bow G Tote J" data-price="1200">
-    <a href="./images/37-bow-g-tote-j.jpg" target="_blank"><img src="./images/37-bow-g-tote-j.jpg" alt="Bow G Tote J"></a>
-    <h3>Bow G Tote J</h3><p>Elegant bow design tote</p><span>Ksh 1200</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-</section>
-
-<h2 class="category">Classy Bags</h2>
-<section class="products">
-  <div class="card" data-name="Classy V Bag" data-price="1200">
-    <a href="./images/03-classy-v-bag.jpg" target="_blank"><img src="./images/03-classy-v-bag.jpg" alt="Classy V Bag"></a>
-    <h3>Classy V Bag</h3><p>Elegant V-design tote</p><span>Ksh 1200</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="Classy Arm Bag" data-price="700">
-    <a href="./images/04-classy-arm-bag.jpg" target="_blank"><img src="./images/04-classy-arm-bag.jpg" alt="Classy Arm Bag"></a>
-    <h3>Classy Arm Bag</h3><p>Elegant shoulder bag</p><span>Ksh 700</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="Classy Bag Bow" data-price="850">
-    <a href="./images/05-classy-bag-bow.jpg" target="_blank"><img src="./images/05-classy-bag-bow.jpg" alt="Classy Bag Bow"></a>
-    <h3>Classy Bag Bow</h3><p>Chic and stylish</p><span>Ksh 850</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="Classy Bags" data-price="1300">
-    <a href="./images/06-classy-bags.jpg" target="_blank"><img src="./images/06-classy-bags.jpg" alt="Classy Bags"></a>
-    <h3>Classy Bags</h3><p>Classic and versatile</p><span>Ksh 1300</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="Classy Bags V" data-price="700">
-    <a href="./images/07-classy-bags-v.jpg" target="_blank"><img src="./images/07-classy-bags-v.jpg" alt="Classy Bags V"></a>
-    <h3>Classy Bags V</h3><p>Elegant V-shaped tote</p><span>Ksh 700</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="Classy Cute Bag 1" data-price="700">
-    <a href="./images/08-classy-cute-bag-1.jpg" target="_blank"><img src="./images/08-classy-cute-bag-1.jpg" alt="Classy Cute Bag 1"></a>
-    <h3>Classy Cute Bag 1</h3><p>Adorable and stylish</p><span>Ksh 700</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="Classy Cute Bag 2" data-price="1200">
-    <a href="./images/09-classy-cute-bag-2.jpg" target="_blank"><img src="./images/09-classy-cute-bag-2.jpg" alt="Classy Cute Bag 2"></a>
-    <h3>Classy Cute Bag 2</h3><p>Perfect daily tote</p><span>Ksh 1500</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="Classy Tote" data-price="1200">
-    <a href="./images/10-classy-tote.jpg" target="_blank"><img src="./images/10-classy-tote.jpg" alt="Classy Tote"></a>
-    <h3>Classy Tote</h3><p>Spacious everyday tote</p><span>Ksh 1200</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="Coach Bag" data-price="2300">
-    <a href="./images/11-coach-bags.jpg" target="_blank"><img src="./images/11-coach-bags.jpg" alt="Coach Bag"></a>
-    <h3>Coach Bag</h3><p>Trendy & classy inspired</p><span>Ksh 2300</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="Coach Tote Bag" data-price="2300">
-    <a href="./images/12-coach-tote-bags.jpg" target="_blank"><img src="./images/12-coach-tote-bags.jpg" alt="Coach Tote Bag"></a>
-    <h3>Coach Tote Bag</h3><p>Spacious everyday tote</p><span>Ksh 2300</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-</section>
-
-<h2 class="category">Cute & Furry Bags</h2>
-<section class="products">
-  <div class="card" data-name="Cute Bags" data-price="700">
-    <a href="./images/13-cute-bags.jpg" target="_blank"><img src="./images/13-cute-bags.jpg" alt="Cute Bags"></a>
-    <h3>Cute Bags</h3><p>Trendy and playful</p><span>Ksh 700</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="Cute White Tote" data-price="1200">
-    <a href="./images/15-cute-white-tote.jpg" target="_blank"><img src="./images/15-cute-white-tote.jpg" alt="Cute White Tote"></a>
-    <h3>Cute White Tote</h3><p>Bright and chic</p><span>Ksh 1200</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="Cute Bag" data-price="700">
-    <a href="./images/16-cutebag.jpg" target="_blank"><img src="./images/16-cutebag.jpg" alt="Cute Bag"></a>
-    <h3>Cute Bag</h3><p>Compact and stylish</p><span>Ksh 700</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="Cute Tote" data-price="1200">
-    <a href="./images/17-cute-tote.jpg" target="_blank"><img src="./images/17-cute-tote.jpg" alt="Cute Tote"></a>
-    <h3>Cute Tote</h3><p>Stylish everyday tote</p><span>Ksh 1200</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="Furry Bag" data-price="700">
-    <a href="./images/18-furry-bag.jpg" target="_blank"><img src="./images/18-furry-bag.jpg" alt="Furry Bag"></a>
-    <h3>Furry Bag</h3><p>Soft and stylish</p><span>Ksh 700</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="Furry N Bag" data-price="700">
-    <a href="./images/19-furry-n-bag.jpg" target="_blank"><img src="./images/19-furry-n-bag.jpg" alt="Furry N Bag"></a>
-    <h3>Furry N Bag</h3><p>Trendy fur design</p><span>Ksh 700</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="G Furry Bag" data-price="700">
-    <a href="./images/20-g-furry-bag.jpg" target="_blank"><img src="./images/20-g-furry-bag.jpg" alt="G Furry Bag"></a>
-    <h3>G Furry Bag</h3><p>Chic and soft</p><span>Ksh 700</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="Fancy Bag" data-price="1000">
-    <a href="./images/25-fancy-bag.jpg" target="_blank"><img src="./images/25-fancy-bag.jpg" alt="Fancy Bag"></a>
-    <h3>Fancy Bag</h3><p>Elegant for all occasions</p><span>Ksh 1000</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="Fashion Bag" data-price="1500">
-    <a href="./images/26-fashion-bag.jpg" target="_blank"><img src="./images/26-fashion-bag.jpg" alt="Fashion Bag"></a>
-    <h3>Fashion Bag</h3><p>Trendy and versatile</p><span>Ksh1500</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-</section>
-
-<h2 class="category">Lipsticks & Skincare</h2>
-<section class="products">
-  <div class="card" data-name="CMAA DU Lipstick Set" data-price="900">
-    <a href="./images/32-cmaa-du-liquid-mate-lipstick-set.jpg" target="_blank"><img src="./images/32-cmaa-du-liquid-mate-lipstick-set.jpg" alt="CMAA DU Lipstick Set"></a>
-    <h3>CMAA DU Lipstick Set</h3><p>Vibrant & long-lasting shades</p><span>Ksh 900</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="ERSHQL Lipstick Set" data-price="1000">
-    <a href="./images/33-ershql-lipstick-set.jpg" target="_blank"><img src="./images/33-ershql-lipstick-set.jpg" alt="ERSHQL Lipstick Set"></a>
-    <h3>ERSHQL Lipstick Set</h3><p>Sweet and classy colors</p><span>Ksh 1000</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  
-  <div class="card" data-name="Sadoer Salicylic Set" data-price="850">
-    <a href="./images/30-sadoer-salicylic-acid-skin-care-set.jpg" target="_blank"><img src="./images/30-sadoer-salicylic-acid-skin-care-set.jpg" alt="Sadoer Salicylic Set"></a>
-    <h3>Sadoer Salicylic Set</h3><p>Deep cleanse & glow</p><span>Ksh 850</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="Sadoer Skincare Set" data-price="1250">
-    <a href="./images/31-sadoer-skincare-set.jpg" target="_blank"><img src="./images/31-sadoer-skincare-set.jpg" alt="Sadoer Skincare Set"></a>
-    <h3>Sadoer Skincare Set</h3><p>Complete daily care</p><span>
-ksh1250</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="Sol De Janiero" data-price="600">
-    <a href="./images/29-sol-de-janiero-body-mist.jpg" target="_blank"><img src="./images/29-sol-de-janiero-body-mist.jpg" alt="Sol De Janiero"></a>
-    <h3>Sol De Janiero</h3><p>Fragrant & refreshing</p><span>Ksh 600</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="EOS Body Lotion" data-price="2500">
-    <a href="./images/27-eos-body-lotion.jpg" target="_blank"><img src="./images/27-eos-body-lotion.jpg" alt="EOS Body Lotion"></a>
-    <h3>EOS Body Lotion</h3><p>Softens and hydrates</p><span>Ksh 2500</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="EOS Body Wash" data-price="2000">
-    <a href="./images/28-eos-body-wash.jpg" target="_blank"><img src="./images/28-eos-body-wash.jpg" alt="EOS Body Wash"></a>
-    <h3>EOS Body Wash</h3><p>Refreshing and smooth</p><span>Ksh 2000</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="Bodysplash" data-price="200">
-    <a href="./images/bodysplash.jpg" target="_blank"><img src="./images/bodysplash.jpg" alt="Bodysplash"></a>
-    <h3>Bodysplash</h3><p>Refreshing and fragrant</p><span>Ksh 200</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-</section>
-
-<h2 class="category">Wallets, Face Masks & Wipes</h2>
-<section class="products">
-  <div class="card" data-name="Cute Girly Wallet" data-price="500">
-    <a href="./images/14-cute-girly-wallet.jpg" target="_blank"><img src="./images/14-cute-girly-wallet.jpg" alt="Cute Girly Wallet"></a>
-    <h3>Cute Girly Wallet</h3><p>Compact and stylish</p><span>Ksh 500</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="Face Masks" data-price="50">
-    <a href="./images/35-face-masks.jpg" target="_blank"><img src="./images/35-face-masks.jpg" alt="Face Masks"></a>
-    <h3>Face Masks</h3><p>Safe and reusable</p><span>Ksh 50</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-  <div class="card" data-name="Wipes" data-price="50">
-    <a href="./images/24-wipes.jpg" target="_blank"><img src="./images/24-wipes.jpg" alt="Wipes"></a>
-    <h3>Wipes</h3><p>Convenient and hygienic</p><span>Ksh 50</span>
-    <button class="addCart">Add to Cart</button>
-  </div>
-</section>
+</div>
 
 <!-- CART PANEL -->
 <div class="cart-panel">
@@ -310,67 +189,49 @@ ksh1250</span>
 </footer>
 
 <script>
+// CART FUNCTIONALITY
 let cart = [];
 
 function updateCartUI() {
   const cartItemsDiv = document.getElementById('cartItems');
   cartItemsDiv.innerHTML = '';
   let total = 0;
-  cart.forEach((item, index) => {
-    total += item.price * item.qty;
+  cart.forEach((item,index)=>{
+    total += item.price*item.qty;
     const div = document.createElement('div');
     div.classList.add('cart-item');
-    div.innerHTML = `
-      <p>${item.name} x ${item.qty} - Ksh ${item.price*item.qty}</p>
-      <button onclick="removeFromCart(${index})">Remove</button>
-    `;
+    div.innerHTML = `<p>${item.name} x ${item.qty} - Ksh ${item.price*item.qty}</p><button onclick="removeFromCart(${index})">Remove</button>`;
     cartItemsDiv.appendChild(div);
   });
   document.getElementById('cartTotal').textContent = total;
-  document.getElementById('cartProductList').value = cart.map(i => `${i.name} x ${i.qty}`).join("\n");
+  document.getElementById('cartProductList').value = cart.map(i=>`${i.name} x ${i.qty}`).join("\n");
   document.getElementById('payAmount').value = total;
 }
 
-function removeFromCart(index) {
-  cart.splice(index,1);
+function removeFromCart(index){ cart.splice(index,1); updateCartUI(); }
+
+function addToCart(btn){
+  const card = btn.closest('.card');
+  const name = card.querySelector('h3').innerText;
+  const price = parseInt(card.querySelector('span').innerText);
+  let existing = cart.find(item=>item.name===name);
+  if(existing) existing.qty++; else cart.push({name,price,qty:1});
   updateCartUI();
 }
 
-document.querySelectorAll('.addCart').forEach(btn => {
-  btn.addEventListener('click', e => {
-    const card = e.target.closest('.card');
-    const name = card.dataset.name;
-    const price = parseInt(card.dataset.price);
-    let existing = cart.find(item => item.name === name);
-    if(existing){
-      existing.qty++;
-    } else {
-      cart.push({name, price, qty:1});
-    }
-    updateCartUI();
-  });
-});
-
-const mpesaPayBtn = document.getElementById('mpesaPayBtn');
-mpesaPayBtn.addEventListener('click', function(){
+// MPESA
+document.getElementById('mpesaPayBtn').addEventListener('click',function(){
   const amount = document.getElementById('payAmount').value;
-  if(!amount || amount <= 0){
-    alert('Please enter the payment amount.');
-    return;
-  }
+  if(!amount||amount<=0){ alert('Please enter the payment amount.'); return; }
   alert(`Send Ksh ${amount} to 0114688844 via M-Pesa.`);
 });
 
-document.getElementById('sendWhatsApp').onclick = () => {
+// WHATSAPP ORDER
+document.getElementById('sendWhatsApp').onclick = ()=>{
   const name = document.getElementById("name").value;
   const location = document.getElementById("location").value;
   const amount = document.getElementById("payAmount").value;
-
-  if(!name || !location || !amount || cart.length===0){
-    alert("Please fill all fields and add products to the cart.");
-    return;
-  }
-
+  if(!name||!location||!amount||cart.length===0){ alert("Please fill all fields and add products to the cart."); return; }
   const message = `ORDER DETAILS
 Name: ${name}
 Delivery Location: ${location}
@@ -379,15 +240,28 @@ ${cart.map(i=>`${i.name} x ${i.qty}`).join("\n")}
 Total Amount: Ksh ${amount}
 Payment: M-Pesa Send Money
 Number: 0114688844`;
-
-  window.open(`https://wa.me/254114688844?text=${encodeURIComponent(message)}`, "_blank");
+  window.open(`https://wa.me/254114688844?text=${encodeURIComponent(message)}`,"_blank");
 };
+
+// PRODUCT MODAL
+function openModal(element){
+  const card = element.closest('.card');
+  document.getElementById('modalImg').src = card.querySelector('img').src;
+  document.getElementById('modalTitle').innerText = card.querySelector('h3').innerText;
+  document.getElementById('modalPrice').innerText = "Ksh "+card.querySelector('span').innerText;
+  document.getElementById('productModal').style.display='flex';
+}
+function closeModal(){ document.getElementById('productModal').style.display='none'; }
+
+// FILTER CATEGORIES
+function filterCategory(cat){
+  document.querySelectorAll('.products .card').forEach(card=>{
+    if(cat==='all'){ card.style.display='block'; }
+    else if(card.dataset.category===cat){ card.style.display='block'; }
+    else { card.style.display='none'; }
+  });
+}
 </script>
 
 </body>
 </html>
-
-
-
-
-
